@@ -1,7 +1,7 @@
 import unittest
 
 
-class icc.modelviewTests(unittest.TestCase):
+class icc.mvwTests(unittest.TestCase):
 
     def setUp(self):
         pass

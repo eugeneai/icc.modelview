@@ -12,8 +12,8 @@ V=$(HOME)/.pyenv/versions/$(LPYTHON)
 #VB=$(V)/bin
 #PYTHON=$(VB)/$(LPYTHON)
 #ROOT=$(PWD)
-#INI=icc.modelview
-#LCAT=src/icc.modelview/locale/
+#INI=icc.mvw
+#LCAT=src/icc.mvw/locale/
 
 #LG_DIR="link-grammar"
 #LG_LIB_DIR=$(TOP_DIR)/$(LG_DIR)/.libs

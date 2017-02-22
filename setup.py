@@ -4,7 +4,8 @@
 #   * `Python Project Howto <http://infinitemonkeycorps.net/docs/pph/>`_
 
 from setuptools import setup, find_packages
-import sys, os
+import sys
+import os
 #from Cython.Build import cythonize
 from setuptools.extension import Extension
 
@@ -39,24 +40,24 @@ dependency_links = [
     #'https://github.com/<user2>/<package2>/archive/master.zip#egg=<package2>-0.3.0',
 ]
 
-#Cython extension
+# Cython extension
 
-#TOP_DIR="/home/eugeneai/Development/codes/NLP/workprog/tmp/link-grammar"
-#LG_DIR="link-grammar"
-#LG_LIB_DIR=os.path.join(TOP_DIR,LG_DIR,".libs")
-#LG_HEADERS=os.path.join(TOP_DIR)
+# TOP_DIR="/home/eugeneai/Development/codes/NLP/workprog/tmp/link-grammar"
+# LG_DIR="link-grammar"
+# LG_LIB_DIR=os.path.join(TOP_DIR,LG_DIR,".libs")
+# LG_HEADERS=os.path.join(TOP_DIR)
 
-ext_modules=[
-#    Extension("icc.modelview.cython_module",
-#              sources=["src/./icc.modelview/cython_module.pyx"],
-#              libraries=["gdal"],
-#    )
+ext_modules = [
+    #    Extension("icc.mvw.cython_module",
+    #              sources=["src/./icc.mvw/cython_module.pyx"],
+    #              libraries=["gdal"],
+    #    )
 ]
 
 setup(
-    name='icc.modelview',
+    name='icc.mvw',
     version=version,
-    description="Model-View-ETC components",
+    description="Model-View-Whatever components",
     long_description=README + '\n\n' + NEWS,
     # Get classifiers from http://pypi.python.org/pypi?%3Aaction=list_classifiers
     # classifiers=[c.strip() for c in """
@@ -72,25 +73,25 @@ setup(
     keywords='MVC MVP MVM UI',
     author='Evgeny Cherkashin',
     author_email='eugeneai@irnok.net',
-    url='https://github.com/eugeneai/icc.modelview',
+    url='https://github.com/eugeneai/icc.mvw',
     license='GPL>=2',
     packages=find_packages("src"),
-    package_dir = {'': "src"},
-    namespace_packages = ['icc'],
+    package_dir={'': "src"},
+    namespace_packages=['icc'],
     include_package_data=True,
     zip_safe=False,
     install_requires=install_requires,
-    dependency_links = dependency_links,
+    dependency_links=dependency_links,
     extras_require={
-          'tests': tests_requires,
-          'dev': dev_requires,
+        'tests': tests_requires,
+        'dev': dev_requires,
     },
     test_suite='tests',
     entry_points={
         'console_scripts':
-            ['icc.modelview=icc.modelview:main']
+            ['icc.mvw=icc.mvw:main']
     },
     #ext_modules = cythonize(ext_modules),
     #test_suite = 'nose.collector',
-    #setup_requires=['nose>=1.0','Cython','coverage']
+    # setup_requires=['nose>=1.0','Cython','coverage']
 )
