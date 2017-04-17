@@ -22,3 +22,22 @@ class IPresenter(IController):
     """Interface representing Presenter in MVP
     """
 
+class IViewRegistry(Interface):
+    """
+    Registers views under names
+    """
+
+    def register(view, name):
+        """
+        Register a view under the name.
+        """
+
+    def unregister(name):
+        """
+        Unregister view under the name.
+        """
+
+    def get(name, default):
+        """
+        Return the view registered under the name.
+        """
