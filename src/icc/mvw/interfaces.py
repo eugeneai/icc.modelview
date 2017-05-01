@@ -1,5 +1,6 @@
 from zope.interface import Interface, Attribute
 
+
 class IModel(Interface):
     """Just marker interface, to mark models in
     various MV* patterns: MVC, MVP, MVMC, etc.
@@ -8,6 +9,12 @@ class IModel(Interface):
 
 class IView(Interface):
     """Interface representing view in MVC, MVP, etc.
+    """
+
+
+class IMVWView(IView):
+    """Interface representing views, which know
+    the references to the model and UI.
     """
     model = Attribute("Project under exploration. The MVC Model.")
     ui = Attribute("User interface component holder.")
@@ -21,6 +28,7 @@ class IController(Interface):
 class IPresenter(IController):
     """Interface representing Presenter in MVP
     """
+
 
 class IViewRegistry(Interface):
     """
